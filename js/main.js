@@ -5,6 +5,12 @@
 
     function callback(entries) {
         console.log(entries[0]);
+
+        if (entries[0].isIntersecting) {
+            entries[0].target.classList.add('appear');
+        } else {
+            entries[0].target.classList.remove('appear');
+        }
     }
 
     const options = {
